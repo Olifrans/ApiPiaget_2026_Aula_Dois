@@ -1,0 +1,6 @@
+@ApiPiagetDois_HostAddress = http://localhost:5123
+
+GET {{ApiPiagetDois_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
