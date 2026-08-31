@@ -16,7 +16,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-// Adicione antes de builder.Build()
+// Policy Cors
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -43,7 +43,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Depois de app = builder.Build()
+
+// Policy Cors
 app.UseCors("AllowAll");
 
 app.UseAuthorization();
